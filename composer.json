@@ -1,0 +1,22 @@
+{
+    "name": "anna-sock/gestion-commerciale",
+    "description": "challenge 2 jour 2",
+    "autoload": {
+        "psr-4": {
+            "Src\\Entity\\": "src/entity/",
+            "Src\\Repository\\": "src/repository/",
+            "Config\\Core\\": "config/core/",
+            "Src\\Controllers\\": "src/controllers/"
+        }
+      
+    },
+    "authors": [
+        {
+            "name": "AnnaSock",
+            "email": "annasock542@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
