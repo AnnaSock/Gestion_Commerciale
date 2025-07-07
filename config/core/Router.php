@@ -9,7 +9,6 @@ class Router{
 
     
         
-        // var_dump($route["/commande"]);
         if(isset($route[$uri])){
             
             $action=$route[$uri]["action"];
@@ -21,12 +20,7 @@ class Router{
             $erreur->erreur();
         }
        
-        // if(!isset($route[0])){
-        //     $controller= new $route[$uri]();
-        //     $controller-> $route[$uri];
-
-
-        // }
+      
 }
 
 }

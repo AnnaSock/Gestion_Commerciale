@@ -25,7 +25,7 @@
           <div class="bg-darker-bg  backdrop-blur-sm rounded-full p-2 mr-4">
             <i class="fas fa-user w-5 h-5 text-white text-center"></i>
           </div>
-          <input  type="tel" placeholder="Login" class="bg-transparent text-black placeholder-black-200 w-full focus:outline-none">
+          <input  type="tel" placeholder="Login" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
         </div>
         <small  class="hidden text-[1rem] text-red-500 mt-[1.5rem] ml-[1rem]"></small>
       </div>
@@ -35,7 +35,7 @@
           <div class="bg-darker-bg  backdrop-blur-sm rounded-full p-2 mr-4">
             <i class="fas fa-lock w-5 h-5 text-white text-center"></i>
           </div>
-          <input  type="password" placeholder="Mot de passe" class="bg-transparent text-black placeholder-black-200 w-full focus:outline-none">
+          <input  type="password" placeholder="Mot de passe" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
         </div>
         <small  class="hidden text-[1rem] text-red-500 mt-[1rem] ml-[1rem]"></small>
       </div>

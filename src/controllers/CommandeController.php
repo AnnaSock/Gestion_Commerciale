@@ -31,6 +31,7 @@ class CommandeController extends AbstractController{
         public  function store(){
                 // header("location: http://localhost:8000/validerCommande");
                 header("Location: " . url() . "/validerCommande");
+                exit;
         }
 
 

@@ -6,8 +6,12 @@
             "Src\\Entity\\": "src/entity/",
             "Src\\Repository\\": "src/repository/",
             "Config\\Core\\": "config/core/",
-            "Src\\Controllers\\": "src/controllers/"
-        }
+            "Src\\Controllers\\": "src/controllers/",
+            "Src\\Service\\": "src/service/"
+        },
+        "files": [
+            "config/url.php"
+        ]
       
     },
     "authors": [

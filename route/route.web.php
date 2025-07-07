@@ -11,10 +11,10 @@ $route= [
                 "action"=> "index"
         ],
 
-        // "/login"=>[
-        //         "controller"=>SecurityController::class,
-        //         "action"=> "login"
-        // ],
+        "/login"=>[
+                "controller"=>SecurityController::class,
+                "action"=> "login"
+        ],
 
         "/connexion"=>[
                 "controller"=> CommandeController::class,

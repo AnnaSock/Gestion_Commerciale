@@ -3,6 +3,7 @@
 namespace Config\Core;
 abstract class AbstractController{
 
+        protected $session;
         protected string $layout;
         public function __construct(){
             $this->layout="base.layout.php";
