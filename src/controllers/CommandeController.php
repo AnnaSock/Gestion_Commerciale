@@ -3,7 +3,6 @@
 namespace Src\Controllers;
 
 use Config\Core\AbstractController;
-use function Config\url;
 
 
 
@@ -29,8 +28,8 @@ class CommandeController extends AbstractController{
 
         }
         public  function store(){
-                // header("location: http://localhost:8000/validerCommande");
-                header("Location: " . url() . "/validerCommande");
+                header("location: http://localhost:8000/validerCommande");
+                // header("Location: " . url() . "/validerCommande");
                 exit;
         }
 

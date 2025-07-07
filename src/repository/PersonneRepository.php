@@ -4,7 +4,12 @@ namespace Src\Repository;
 
 use Config\Core\AbstractRepository;
 use Config\Core\Database;
-use PDO;
+use \PDO;
+use Src\Entity\Client;
+use Src\Entity\Vendeur;
+
+use TypePersonne;
+use function Config\dd;
 class PersonneRepository extends AbstractRepository {
     
     private array $table;
@@ -16,25 +21,36 @@ class PersonneRepository extends AbstractRepository {
     }
     
     
-    public function selectByLoginAndPassword($login, $password):?array{
-        
-        $sql= "SELECT login, password FROM Personne WHERE login= :login AND password= :password AND type='Vendeur'";
+    public function selectByLoginAndPassword($login, $password):Vendeur|null {
+        $sql= "SELECT * FROM Personne WHERE login= :login AND password= :password";
         $requete= $this->database->prepare($sql);
         $requete->bindParam(':login', $login);
         $requete->bindParam(':password', $password);
         $requete->execute();
-        $vendeur=$requete->fetch(PDO::FETCH_ASSOC); 
-        var_dump($vendeur);
-        return $vendeur ?: null;
+
+        $personne=$requete->fetch(PDO::FETCH_ASSOC); 
+        
+
+        if(!isset($personne) && $personne['type']= TypePersonne::VENDEUR->value){
+
+            $vendeur= Vendeur::toObject($personne);
+            return $vendeur;
+        }
+
+        // else
+        // {
+        //     $client=Client::toObject($personne);
+        //     dd($client);
+        //     // return $client;
+        // }
+        
+        return null;
+        
+
     }
     
-     public  function selectAll():array{
-        $sql= "SELECT * FROM Personne";
-        $requete=$this->database->prepare($sql);
-        $requete->execute();
-        $personne=$requete->fetch(PDO::FETCH_ASSOC);
-        var_dump($personne);
-        return $personne;
+     public  function selectAll(){
+        
      }
      public  function insert(){
 
@@ -53,3 +69,4 @@ class PersonneRepository extends AbstractRepository {
      }
       
 }
+

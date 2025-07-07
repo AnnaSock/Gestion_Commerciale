@@ -5,9 +5,8 @@ use Config\Core\ErrorController;
 class Router{
     public static function resolve($route){
         $uri= parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-    
-
-    
+        
+        
         
         if(isset($route[$uri])){
             

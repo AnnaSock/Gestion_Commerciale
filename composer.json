@@ -10,7 +10,9 @@
             "Src\\Service\\": "src/service/"
         },
         "files": [
-            "config/url.php"
+            "config/boostrap.php",
+            "config/helpers.php"
+            
         ]
       
     },

@@ -6,11 +6,12 @@ use TypePersonne;
 
 class Client extends Personne{
     private int  $telephone;
+    protected TypePersonne $typePersonne;
     private array $commandes;
 
-    public function __construct($id=0,  $nom="",  $prenom="",$telephone='', $typePersonne ){
-        parent::__construct($id, $nom, $prenom, $typePersonne );
-        $this->typePersonne=TypePersonne::CLIENT;
+    public function __construct($id=0,  $nom="",  $prenom="",$telephone='',$login='', $password='', $typePersonne){
+        parent::__construct($id, $nom, $prenom, $login,$password,$typePersonne );
+        $this->typePersonne=$typePersonne;
         $this->telephone= $telephone;
         $this->commandes=[];
     }
@@ -24,12 +25,14 @@ class Client extends Personne{
 
      public static  function toObject(array $data):static{
          
-           return new self(
+           return new static(
               $data["id"],
               $data["nom"],
               $data["prenom"],
               $data["telephone"],
-              $data["type"]
+              $data["login"],
+              $data["password"],
+              $data["type"]              
            ) ;
      }
     

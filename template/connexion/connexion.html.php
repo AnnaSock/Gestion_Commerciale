@@ -19,13 +19,13 @@
       <h1 class="text-3xl text-white font-bold bg-gradient-to-r from-[#DAF1DE] to-[#8EB69B] bg-clip-text mb-2">Veuillez entrer vos informations</h1>
     </div>
 
-    <form  class="space-y-6" action="/connexion" method="POST">
+    <form  class="space-y-6" action="/login" method="POST">
       <div class="carteInput">
         <div class="flex items-center bg-white border border-green-accent rounded-full px-4 py-4 hover:bg-[#235347]/30 focus-within:bg-[#235347]/30 transition duration-300 transform hover:scale-110">
           <div class="bg-darker-bg  backdrop-blur-sm rounded-full p-2 mr-4">
             <i class="fas fa-user w-5 h-5 text-white text-center"></i>
           </div>
-          <input  type="tel" placeholder="Login" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
+          <input  name="login" type="tel" placeholder="Login" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
         </div>
         <small  class="hidden text-[1rem] text-red-500 mt-[1.5rem] ml-[1rem]"></small>
       </div>
@@ -35,7 +35,7 @@
           <div class="bg-darker-bg  backdrop-blur-sm rounded-full p-2 mr-4">
             <i class="fas fa-lock w-5 h-5 text-white text-center"></i>
           </div>
-          <input  type="password" placeholder="Mot de passe" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
+          <input name="password" type="password" placeholder="Mot de passe" class="bg-transparent text-white placeholder-black-200 w-full focus:outline-none">
         </div>
         <small  class="hidden text-[1rem] text-red-500 mt-[1rem] ml-[1rem]"></small>
       </div>

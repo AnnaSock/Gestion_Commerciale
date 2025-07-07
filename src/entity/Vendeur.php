@@ -6,17 +6,15 @@ use TypePersonne;
 
  class Vendeur extends Personne{
     private int $matricule;
-    private string $login;
-    private string $password;
+   
+   
     private array $paiements;
     private array $commandes;
 
     public function __construct( $id=0,  $nom='',  $prenom='', $login='', $password='', $matricule=0, $typePersonne){
-        parent::__construct($id, $nom, $prenom, $typePersonne);
+        parent::__construct($id, $nom, $prenom, $login,$password, $typePersonne);
         $this->typePersonne=TypePersonne::VENDEUR;
         $this->matricule= $matricule;
-        $this->login= $login;
-        $this->password= $password;
         $this->commandes= [];
         $this->paiements= [];
     }
@@ -34,7 +32,7 @@ use TypePersonne;
      }
 
       public static  function toObject(array $data):static{
-           return new self(
+           return new static(
               $data["id"],
               $data["nom"],
               $data["prenom"],

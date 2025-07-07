@@ -9,12 +9,16 @@ abstract class Personne extends AbstractEntity{
     protected  int $id;
     protected string $nom;
     protected string $prenom;
+    protected string $login;
+    protected string $password;
     protected TypePersonne $typePersonne;
 
-    public function __construct( $id=0,  $nom="",  $prenom="", $typePersonne){
+    public function __construct( $id=0,  $nom="",  $prenom="",$login='',$password='', $typePersonne){
         $this->id=$id;
         $this->nom=$nom;
         $this->prenom=$prenom;
+        $this->login=$login;
+        $this->password=$password;
         $this->typePersonne=$typePersonne;
     }
 
@@ -23,6 +27,8 @@ abstract class Personne extends AbstractEntity{
             "id"=> $this->id,
             "nom"=>$this ->nom,
             "prenom"=> $this->prenom,
+            "login"=> $this->login,
+            "password"=> $this->password,
             "typePersonne"=>$this->typePersonne
         ];
      }

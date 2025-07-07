@@ -8,14 +8,13 @@ class SecurityService{
 
 
     public function __construct(){
-        $repo= $this->personneRepository= new PersonneRepository();
-        // $repo->selectByLoginAndPassword("annasock542@gmail.com", "passer123");
-        $repo->selectAll();
-
+      $this->personneRepository= new PersonneRepository();
     }
-
+    
     public function seConnecter($login, $password){
-
+        
+      return $this->personneRepository->selectByLoginAndPassword($login, $password);
+         
 
     }
     

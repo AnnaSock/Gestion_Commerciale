@@ -16,15 +16,15 @@ $route= [
                 "action"=> "login"
         ],
 
-        "/connexion"=>[
-                "controller"=> CommandeController::class,
-                "action"=> "index"
-        ],
+        // "/connexion"=>[
+        //         "controller"=> CommandeController::class,
+        //         "action"=> "index"
+        // ],
 
-        "/commande"=>[
-                "controller"=> CommandeController::class,
-                "action"=> "create"
-        ],
+        // "/commande"=>[
+        //         "controller"=> CommandeController::class,
+        //         "action"=> "create"
+        // ],
 
 
         "/validerCommande"=> [
